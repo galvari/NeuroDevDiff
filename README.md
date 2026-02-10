@@ -4,8 +4,9 @@
   <img src="assets/logo.png" alt="NeuroDevDiff logo" width="240">
 </p>
 
-<h1 align="center">NeuroDevDiff</h1>
-
+<h1 align="center" style="font-size: 3em; margin-bottom: 0;">
+  NeuroDevDiff
+</h1>
 
 
 ---------
@@ -197,7 +198,16 @@ If you use this dataset in academic work, please cite :)
 Alvari, G. (2026). *NeuroDevDiff: Synthetic Clinical Vignettes for Neurodevelopmental Decision Support*.
 GitHub repository.
 
-A BibTeX entry is available via the “Cite this repository” button on GitHub.
+```
+@misc{alvari2026neurodevdiff,
+  title        = {NeuroDevDiff: Synthetic Clinical Vignettes for Neurodevelopmental Decision Support},
+  author       = {Alvari, Gianpaolo},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/galvari/NeuroDevDiff}}
+}
+```
+
 
 ---
 
