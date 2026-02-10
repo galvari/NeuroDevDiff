@@ -52,7 +52,7 @@ The dataset is suitable for:
 - LLM prompting and fine-tuning
 
 The dataset currently models presentations consistent with:
-* ***Autism Spectrum Conditions (ASC / ASD)***
+* ***Autism Spectrum Conditions (ASC / ASD)***//
 Including heterogeneous cognitive profiles, sensory sensitivities, social communication differences, and rigidity in routines.
 * ***Attention-Deficit/Hyperactivity Disorder (ADHD)***
 Characterized by attentional difficulties, executive functioning challenges, impulsivity, and variability across contexts.
