@@ -1,11 +1,15 @@
 
-![NeuroDevDiff cover](/Users/galvari/Desktop/RandomJobs/NDD/imgs/cover.png)
 
 # NDD: NeuroDevDiff Dataset 
-<h1>
-  <img src="/Users/galvari/Desktop/RandomJobs/NDD/imgs/logo.png" alt="NeuroDevDiff logo" width="48" style="vertical-align: middle;">
-  NeuroDevDiff
-</h1>
+<p align="center">
+  <img src="assets/logo.png" alt="NeuroDevDiff logo" width="180">
+</p>
+
+<h1 align="center">NeuroDevDiff</h1>
+
+<p align="center">
+  Synthetic neurodevelopmental clinical vignettes for AI decision support under uncertainty
+</p>
 ## When “I Don’t Know Yet” Is the Right Clinical Answer
 
 
