@@ -1,13 +1,11 @@
 
 
 <p align="center">
-  <img src="assets/logo.png" alt="NeuroDevDiff logo" width="180">
+  <img src="assets/logo.png" alt="NeuroDevDiff logo" width="240">
 </p>
 
 <h1 align="center">NeuroDevDiff</h1>
 
-
-<img src="assets/logo.png" width="40" /> NeuroDevDiff
 
 
 ---------
