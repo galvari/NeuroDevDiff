@@ -7,7 +7,8 @@
 <h1 align="center">NeuroDevDiff</h1>
 
 
-
+<img src="assets/logo.png" width="40" /
+NeuroDevDiff
 
 ---------
 
