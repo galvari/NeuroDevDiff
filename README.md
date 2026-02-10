@@ -1,17 +1,17 @@
 
 
-<p align="right">
+<p align="center">
   <img src="assets/logo.png" alt="NeuroDevDiff logo" width="180">
 </p>
 
-<h1 align="left">NeuroDevDiff</h1>
+<h1 align="center">NeuroDevDiff</h1>
 
 <p align="center">
-  When “I Don’t Know Yet” Is the Right Clinical Answer
+  Synthetic neurodevelopmental clinical vignettes for AI decision support under uncertainty
 </p>
 
 
-# When “I Don’t Know Yet” Is the Right Clinical Answer
+## When “I Don’t Know Yet” Is the Right Clinical Answer
 
 
 NeuroDevDiff (NDD) is a synthetic dataset of pediatric neurodevelopmental clinical vignettes,
