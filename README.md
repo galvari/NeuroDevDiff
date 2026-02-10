@@ -52,29 +52,21 @@ The dataset is suitable for:
 - LLM prompting and fine-tuning
 
 The dataset currently models presentations consistent with:
-* ***Autism Spectrum Conditions (ASC / ASD)***
-
+* ***Autism Spectrum Conditions (ASC / ASD)***: 
 Including heterogeneous cognitive profiles, sensory sensitivities, social communication differences, and rigidity in routines.
-* ***Attention-Deficit/Hyperactivity Disorder (ADHD)***
-
+* ***Attention-Deficit/Hyperactivity Disorder (ADHD)***:
 Characterized by attentional difficulties, executive functioning challenges, impulsivity, and variability across contexts.
-* ***Anxiety Disorders***
-
+* ***Anxiety Disorders***:
 Presentations dominated by worry, avoidance, somatic complaints, school-related anxiety, and internalizing symptoms that may overlap with neurodevelopmental conditions.
-* ***Obsessive–Compulsive Disorder (OCD)***
-
+* ***Obsessive–Compulsive Disorder (OCD)***: 
 Including intrusive thoughts, repetitive behaviors, and cognitive profiles that may otherwise appear relatively preserved.
 * ***Specific Learning Disorders (SLD)***
-
 Profiles with selective academic difficulties (e.g., reading, writing, or math) in the context of otherwise average cognitive functioning.
-* ***Selective Mutism***
-
+* ***Selective Mutism***:
 Marked by context-dependent communication inhibition, often overlapping with anxiety and social withdrawal.
-* ***Global Developmental Delay / Intellectual Disability (GDD/ID)***
-
+* ***Global Developmental Delay / Intellectual Disability (GDD/ID)***:
 Presentations with globally reduced and relatively homogeneous cognitive functioning across domains.
-* ***Neurodevelopmental Disorder, Unspecified (NDD-UNSPEC)***
-
+* ***Neurodevelopmental Disorder, Unspecified (NDD-UNSPEC)***:
 Mixed or ambiguous presentations that do not clearly map onto a single category and typically require further assessment.
 
 
