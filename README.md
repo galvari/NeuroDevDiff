@@ -6,9 +6,6 @@
 
 <h1 align="center">NeuroDevDiff</h1>
 
-<p align="center">
-  Synthetic neurodevelopmental clinical vignettes for AI decision support under uncertainty
-</p>
 
 
 
