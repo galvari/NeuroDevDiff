@@ -227,6 +227,11 @@ GitHub repository.
 }
 ```
 
+## License
+
+This dataset is released under the **CC0 1.0 Universal** license.
+
+You are free to use, modify, and redistribute it for any purpose.
 
 ---
 
