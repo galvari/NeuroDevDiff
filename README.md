@@ -1,9 +1,9 @@
 
-![NeuroDevDiff cover](assets/cover.png)
+![NeuroDevDiff cover](/Users/galvari/Desktop/RandomJobs/NDD/imgs/cover.png)
 
 # NDD: NeuroDevDiff Dataset 
 <h1>
-  <img src="assets/logo.png" alt="NeuroDevDiff logo" width="48" style="vertical-align: middle;">
+  <img src="/Users/galvari/Desktop/RandomJobs/NDD/imgs/logo.png" alt="NeuroDevDiff logo" width="48" style="vertical-align: middle;">
   NeuroDevDiff
 </h1>
 ## When “I Don’t Know Yet” Is the Right Clinical Answer
