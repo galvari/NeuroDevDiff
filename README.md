@@ -167,6 +167,55 @@ Suggested follow-up questions:
 
 ---
 
+## Dataset Diagnostics
+
+
+### Class distribution
+
+The dataset includes 2,000 cases across 8 neurodevelopmental profiles.  
+Class balance is intentionally uneven to approximate real-world referral patterns.
+
+| Profile | Proportion |
+|---------|-----------|
+| ASD | 18.9% |
+| ADHD | 18.0% |
+| Anxiety | 15.8% |
+| SLD | 14.2% |
+| OCD | 11.2% |
+| Selective Mutism | 8.2% |
+| NDD Unspecified | 7.2% |
+| GDD/ID | 6.6% |
+
+### Decision Support Signal
+
+Overall defer rate: 56.4%  
+High-risk flag rate: 3.2%
+
+Defer rates vary across profiles, reflecting differential diagnostic ambiguity:
+- Higher in NDD_UNSPEC (70.3%) and ADHD (65.7%)
+- Lower in SLD (48.6%) and GDD/ID (48.5%)
+
+This behavior aim at modelling realistic clinical uncertainty rather than deterministic labeling.
+
+### Cognitive Profile Consistency
+
+Mean cognitive scores (scaled 1–19) show structured patterns:
+
+- ASD: heterogeneous profile (relative visuospatial strength, weaker working memory and processing speed)
+- ADHD: attention and processing speed weaknesses
+- GDD/ID: globally low and homogeneous scores
+- SLD: broadly average and homogeneous profile
+
+These structured patterns prevent trivial shortcut learning while maintaining clinical plausibility.
+
+#### Class Distribution
+![Class Distribution](assets/class_distribution.png)
+
+#### Cognitive Profile Structure
+![Cognitive Profiles](assets/cognitive_profiles.png)
+
+---
+
 ## Intended tasks
 
 NeuroDevDiff supports tasks such as:
