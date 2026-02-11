@@ -214,6 +214,9 @@ These structured patterns prevent trivial shortcut learning while maintaining cl
 #### Cognitive Profile Structure
 ![Cognitive Profiles](assets/cognitive_profiles.png)
 
+#### Defer Rate
+![Cognitive Profiles](assets/defer_by_profile.png)
+
 ---
 
 ## Intended tasks

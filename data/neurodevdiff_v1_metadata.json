@@ -4,17 +4,23 @@
   "n_cases": 2000,
   "seed": 42,
   "noise_level": 1.0,
+  "created_utc": "2026-02-11T15:23:02+00:00",
   "class_balance": {
-    "ASD": 0.189,
-    "ADHD": 0.1795,
-    "ANXIETY": 0.1575,
-    "SLD": 0.142,
-    "OCD": 0.1115,
-    "SELECTIVE_MUTISM": 0.082,
-    "NDD_UNSPEC": 0.0725,
-    "GDD_ID": 0.066
+    "ASD": 0.185,
+    "ADHD": 0.1685,
+    "ANXIETY": 0.1605,
+    "SLD": 0.145,
+    "OCD": 0.1065,
+    "SELECTIVE_MUTISM": 0.084,
+    "GDD_ID": 0.0815,
+    "NDD_UNSPEC": 0.069
   },
   "defer_rate": 0.564,
-  "risk_high_rate": 0.0325,
-  "created_utc": "2026-02-10T15:40:42+00:00"
+  "risk_high_rate": 0.0445,
+  "config": {
+    "version": "1",
+    "n_cases": 2000,
+    "seed": 42,
+    "noise_level": 1.0
+  }
 }
