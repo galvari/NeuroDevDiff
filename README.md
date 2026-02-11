@@ -89,17 +89,7 @@ NeuroDevDiff/
 │   ├── neurodevdiff_v1_test.jsonl
 │   └── neurodevdiff_v1_metadata.json
 │
-├── notebooks/
-│   └── 00_generate_ndd_v1.ipynb
-│
-├── src/
-│   └── ndd_generation.py
-│
-├── assets/
-│   ├── logo.png
-│   └── cover.png
-│
-└── README.md
+
 
 ```
 ### DATA
