@@ -75,30 +75,12 @@ They are meant to reflect how cases are often encountered before a full diagnost
 
 ---
 
-## NDD structure
+### NDD structure
 
-```
-NeuroDevDiff/
-├── data/
-│   ├── neurodevdiff_v1_full.csv
-│   ├── neurodevdiff_v1_train.csv
-│   ├── neurodevdiff_v1_val.csv
-│   ├── neurodevdiff_v1_test.csv
-│   ├── neurodevdiff_v1_train.jsonl
-│   ├── neurodevdiff_v1_val.jsonl
-│   ├── neurodevdiff_v1_test.jsonl
-│   └── neurodevdiff_v1_metadata.json
-│
-
-
-```
-### DATA
 - **CSV files** contain structured variables and generated clinical text.
 `neurodevdiff_v1_full.csv` includes the full dataset, while stratified `train/validation/test` splits are provided for reproducible experiments.
 - **JSON files** provide `input/output` pairs designed for LLM-based workflows, including decision support targets (e.g. defer decisions, rationales, and follow-up questions).
 - **Metadata file** (`neurodevdiff_v1_metadata.json`) contains dataset-level information (versioning, class balance, generation parameters), intended to make analyses transparent and comparable across releases.
-
-Splits are fixed and stratified to ensure reproducibility.
 
 Splits are fixed and stratified to ensure reproducibility.
 
@@ -157,7 +139,7 @@ Suggested follow-up questions:
 
 ---
 
-## Dataset Diagnostics
+## Diagnostics
 
 
 ### Class distribution
