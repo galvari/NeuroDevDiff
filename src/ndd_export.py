@@ -42,23 +42,60 @@ def make_splits(
     return train_df, val_df, test_df
 
 
-def _to_jsonl_llm_pairs(df_part: pd.DataFrame, path: Path) -> None:
+def _to_jsonl_llm_pairs(
+    df_part: pd.DataFrame,
+    path: Path,
+    *,
+    prompt_template: str | None = None,
+    schema_version: str = "1.0",
+) -> None:
     """
-    JSONL format used for LLM training/eval:
-      {"input": "...", "output": {...}, "meta": {...}}
+    JSONL format used for LLM workflows:
+      - input: vignette text only (for prompting)
+      - output: structured dict (ground truth)
+      - input_text: full prompt for SFT/inference
+      - output_text: canonical JSON string for SFT target
+      - meta: metadata
+
+    One line per case.
     """
+
+    if prompt_template is None:
+        prompt_template = (
+            "### Instruction:\n"
+            "Decide if this vignette requires deferral to a human expert.\n"
+            "Return JSON only with keys: should_defer, rationale, confidence, clarifying_questions, differential_hypotheses.\n\n"
+            "### Vignette:\n"
+            "{vignette}\n\n"
+            "### Answer:\n"
+        )
+
     with open(path, "w", encoding="utf-8") as f:
         for _, r in df_part.iterrows():
             alt = [x.strip() for x in str(r.get("plausible_alternatives", "")).split(",") if x.strip()]
 
+            output_obj = {
+                "should_defer": int(r["should_defer"]),
+                "rationale": r["should_defer_rationale_en"],
+                # mettiamo sempre lista (anche vuota) per stabilità
+                "clarifying_questions": list(r["questions_to_ask_en"]) if isinstance(r["questions_to_ask_en"], list) else [],
+                # opzionale: confidence “oracle” (per training), vedi nota sotto
+                "confidence": 0.9 if int(r["should_defer"]) == 1 else 0.1,
+                "differential_hypotheses": [r["true_profile"]] + alt[:2],
+            }
+
+            vignette = r["vignette_en"]
+            input_text = prompt_template.format(vignette=vignette)
+
+            # JSON canonico (stabile): niente spazi inutili, ordine chiavi stabile
+            output_text = json.dumps(output_obj, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
             record = {
-                "input": r["vignette_en"],
-                "output": {
-                    "should_defer": int(r["should_defer"]),
-                    "rationale": r["should_defer_rationale_en"],
-                    "questions_to_ask": r["questions_to_ask_en"],
-                    "differential_hypotheses": [r["true_profile"]] + alt[:2],
-                },
+                "schema_version": schema_version,
+                "input": vignette,
+                "output": output_obj,
+                "input_text": input_text,
+                "output_text": output_text,
                 "meta": {
                     "case_id": int(r["case_id"]),
                     "true_profile": r["true_profile"],
@@ -68,8 +105,8 @@ def _to_jsonl_llm_pairs(df_part: pd.DataFrame, path: Path) -> None:
                     "sex": r["sex"],
                 },
             }
-            f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 def _to_jsonl_vignettes(df_full: pd.DataFrame, path: Path) -> None:
     """

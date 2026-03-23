@@ -29,7 +29,7 @@ The dataset therefore focuses on questions that clinicians face daily:
 
 NDD is intended for researchers and practitioners interested in responsible AI in healthcare, to play in contexts where **uncertainty, overlap, and missing data are the norm**.
 
-
+You can find NDD also on [Kaggle](https://www.kaggle.com/datasets/galvari/neurodevdiff).
 
 ---
 
@@ -73,6 +73,25 @@ Mixed or ambiguous presentations that do not clearly map onto a single category 
 These profiles are deliberately overlapping and non-exhaustive.
 They are meant to reflect how cases are often encountered before a full diagnostic workup, when differential diagnosis and information gathering are still ongoing.
 
+
+---
+
+### LLM-Ready Format
+
+In addition to structured CSV splits, the dataset exports
+LLM-ready JSONL files including:
+
+- input_text: full instruction prompt + vignette
+- output_text: canonical JSON string target
+
+This enables:
+- Zero/Few-shot prompting experiments
+- Supervised Fine-Tuning (SFT) with causal LLMs
+- LoRA-based parameter-efficient adaptation
+
+- This text-to-text representation enables instruction tuning workflows,
+where a causal language model is trained to generate structured outputs
+via next-token prediction (Supervised Fine-Tuning).
 ---
 
 ### NDD structure
@@ -208,6 +227,10 @@ NeuroDevDiff supports tasks such as:
 - **Multimodal learning**
   - Compare structured-only, text-only, and combined models
 
+- **Instruction-tuned LLM adaptation**
+  - Fine-tune small causal language models (e.g., via LoRA)
+    to generate defer decisions and structured rationales.
+
 Predicting the latent profile is **not** the primary goal.
 
 ---
@@ -221,6 +244,71 @@ Predicting the latent profile is **not** the primary goal.
 All data are **fully synthetic** and intended for research and educational use only.
 
 ---
+
+
+
+---
+
+## Repository structure
+
+```
+NeuroDevDiff/
+│
+├── data/                  # dataset (CSV + JSONL)
+├── models/                # trained models (not included in repo)
+├── notebooks/             # main experiments
+│   ├── 00_generate_ndd_v1.ipynb
+│   ├── 01_defer-or-not_tf-distilbert.ipynb
+│   └── 02_hybrid_distilbert_llm.ipynb
+│
+├── assets/                # figures
+└── README.md
+```
+
+---
+
+## Quick start
+
+### Option 1 — Kaggle (recommended)
+
+1. Open the dataset on Kaggle  
+2. Upload the notebooks  
+3. Attach the dataset and pretrained classifier  
+4. Run:
+
+- `02_hybrid_distilbert_llm.ipynb` → full pipeline
+
+---
+
+### Option 2 — Local
+
+1. Clone repository  
+2. Download dataset (see Kaggle link above)  
+3. Place files in:
+
+```
+data/
+models/distilbert/
+```
+
+4. Run notebooks in order:
+
+```
+00 → 01 → 02
+```
+
+---
+
+## Models
+
+Trained models are not included due to size constraints.
+
+- DistilBERT classifier  
+- Tokenizer  
+- Metadata  
+
+These can be downloaded from Kaggle or recreated via notebook `01`.
+
 
 ## Getting started
 
@@ -236,7 +324,7 @@ The dataset is intentionally open-ended to encourage exploration.
 
 ## Citation
 
-If you use this dataset in academic work, please cite :)
+If you use this dataset, please cite :)
 
 Alvari, G. (2026). *NeuroDevDiff: Synthetic Clinical Vignettes for Neurodevelopmental Decision Support*.
 GitHub repository.
