@@ -105,18 +105,36 @@ The model is intentionally high-precision, favoring conservative defer decisions
 
 ---
 
-### LLM reasoning layer
+### LLM Reasoning Layer
 
-The hybrid system augments predictions with structured reasoning:
+The hybrid system augments classifier predictions with structured clinical reasoning outputs, including a rationale, clarifying questions, and differential hypotheses.
+
+#### Structural Evaluation
 
 - JSON parse success rate: 94%  
 - Non-empty rationale: 94%  
 - Non-empty clarifying questions: 94%  
 - Non-empty differential hypotheses: 94%  
-- Average questions per case: 1.89  
-- Average differential hypotheses: 2.69  
+- Average number of questions per case: 1.89  
+- Average number of differential hypotheses: 2.69  
+- Question diversity: 0.90  
 
-This indicates stable generation of clinically relevant reasoning elements.
+These results indicate stable and consistent generation of structured reasoning components, with high diversity in clarifying questions and minimal failure in output formatting.
+
+#### Qualitative Evaluation (LLM-as-Judge)
+
+To assess semantic quality, outputs were evaluated using an auxiliary LLM acting as a judge, scoring multiple dimensions of reasoning quality (scale 1–5):
+
+- Rationale specificity: 2.67  
+- Question usefulness: 4.44  
+- Differential plausibility: 2.89  
+- Overall score: 3.11  
+
+The evaluation highlights a clear strength in the generation of useful clarifying questions, suggesting the model effectively supports uncertainty reduction and information gathering.
+
+However, rationale specificity and differential plausibility remain moderate, indicating that while outputs are generally coherent, they are sometimes generic or insufficiently tailored to individual cases.
+
+Overall, the reasoning layer provides meaningful decision support, particularly in guiding follow-up questioning, while leaving room for improvement in case-specific justification and diagnostic refinement.
 
 ---
 
